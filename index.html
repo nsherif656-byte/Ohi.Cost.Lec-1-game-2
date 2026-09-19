@@ -191,35 +191,35 @@
 <div class="game-container">
     <header>
         <h1>🧠 تحدي ذاكرة المحاسب الخبير</h1>
-        <p class="desc">اختبر مدى استيعابك وتذكرك لأهداف وأبعاد وأهمية محاسبة التكاليف والتطبيق الحسابي لها[cite: 10, 11].</p>
+        <p class="desc">اختبر مدى استيعابك وتذكرك لأهداف وأبعاد وأهمية محاسبة التكاليف والتطبيق الحسابي لها.</p>
     </header>
 
     <!-- Navigation Tabs -->
     <div class="tabs">
-        <button class="tab-btn active" onclick="switchTab('tab1')">الجزء 1: الأسباب والأهداف[cite: 10, 11]</button>
-        <button class="tab-btn" onclick="switchTab('tab2')">الجزء 2: مفاهيم التكاليف[cite: 11]</button>
-        <button class="tab-btn" onclick="switchTab('tab3')">الجزء 3: التطبيق الحسابي[cite: 11]</button>
+        <button class="tab-btn active" onclick="switchTab('tab1')">الجزء 1: الأسباب والأهداف</button>
+        <button class="tab-btn" onclick="switchTab('tab2')">الجزء 2: مفاهيم التكاليف</button>
+        <button class="tab-btn" onclick="switchTab('tab3')">الجزء 3: التطبيق الحسابي</button>
     </div>
 
     <!-- Tab 1: Causes & Objectives -->
     <div id="tab1" class="tab-content active">
         <div class="quiz-card">
-            <div class="question-title">1. ما الذي أدى مباشرة إلى زيادة تعقيد تحديد تكلفة الوحدة وازدياد التكاليف غير المباشرة؟[cite: 10]</div>
+            <div class="question-title">1. ما الذي أدى مباشرة إلى زيادة تعقيد تحديد تكلفة الوحدة وازدياد التكاليف غير المباشرة؟</div>
             <div class="options-grid">
-                <button class="option-btn" onclick="selectAnswer(this, q1, false)">قلة المنافسة وتوقف المصانع</button>
-                <button class="option-btn" onclick="selectAnswer(this, q1, true)">اتساع حجم المنشآت وتعدد مراحل التصنيع واستخدام الآلات[cite: 10]</button>
-                <button class="option-btn" onclick="selectAnswer(this, q1, false)">الاعتماد الكامل على العمل اليدوي فقط</button>
-                <button class="option-btn" onclick="selectAnswer(this, q1, false)">إلغاء التقارير المالية والإدارية</button>
+                <button class="option-btn" onclick="selectAnswer(this, 'q1', false)">قلة المنافسة وتوقف المصانع</button>
+                <button class="option-btn" onclick="selectAnswer(this, 'q1', true)">اتساع حجم المنشآت وتعدد مراحل التصنيع واستخدام الآلات</button>
+                <button class="option-btn" onclick="selectAnswer(this, 'q1', false)">الاعتماد الكامل على العمل اليدوي فقط</button>
+                <button class="option-btn" onclick="selectAnswer(this, 'q1', false)">إلغاء التقارير المالية والإدارية</button>
             </div>
         </div>
 
         <div class="quiz-card">
-            <div class="question-title">2. أي مما يلي يُعد من الأهداف الأساسية لتوفير معلومات التكلفة للإدارة؟[cite: 10, 11]</div>
+            <div class="question-title">2. أي مما يلي يُعد من الأهداف الأساسية لتوفير معلومات التكلفة للإدارة؟</div>
             <div class="options-grid">
-                <button class="option-btn" onclick="selectAnswer(this, q2, true)">المفاضلة بين البدائل وتحديد كفاءة استخدام الموارد المتاحة[cite: 10]</button>
-                <button class="option-btn" onclick="selectAnswer(this, q2, false)">زيادة حجم الفاقد والإسراف في الإنتاج</button>
-                <button class="option-btn" onclick="selectAnswer(this, q2, false)">تجاهل الفرق بين التكاليف الفعلية والمخططة</button>
-                <button class="option-btn" onclick="selectAnswer(this, q2, false)">التركيز الحصري على المعاملات الخارجية فقط</button>
+                <button class="option-btn" onclick="selectAnswer(this, 'q2', true)">المفاضلة بين البدائل وتحديد كفاءة استخدام الموارد المتاحة</button>
+                <button class="option-btn" onclick="selectAnswer(this, 'q2', false)">زيادة حجم الفاقد والإسراف في الإنتاج</button>
+                <button class="option-btn" onclick="selectAnswer(this, 'q2', false)">تجاهل الفرق بين التكاليف الفعلية والمخططة</button>
+                <button class="option-btn" onclick="selectAnswer(this, 'q2', false)">التركيز الحصري على المعاملات الخارجية فقط</button>
             </div>
         </div>
     </div>
@@ -227,22 +227,22 @@
     <!-- Tab 2: Cost Concepts -->
     <div id="tab2" class="tab-content">
         <div class="quiz-card">
-            <div class="question-title">3. تهتم محاسبة التكاليف بالتمييز بين المفاهيم المحاسبية. أي العبارات التالية صحيحة؟[cite: 11]</div>
+            <div class="question-title">3. تهتم محاسبة التكاليف بالتمييز بين المفاهيم المحاسبية. أي العبارات التالية صحيحة؟</div>
             <div class="options-grid">
-                <button class="option-btn" onclick="selectAnswer(this, q3, false)">التكلفة والنفقة والخلل مصطلحات متطابقة تماماً</button>
-                <button class="option-btn" onclick="selectAnswer(this, q3, true)">التمييز بين التكلفة والنفقة والمصروف والخسارة، وتحليل سلوك التكلفة[cite: 11]</button>
-                <button class="option-btn" onclick="selectAnswer(this, q3, false)">إلغاء التمييز بين سلوك التكلفة الثابتة والمتغيرة</button>
-                <button class="option-btn" onclick="selectAnswer(this, q3, false)">عدم دراسة العلاقة بين التكلفة والحجم والربح</button>
+                <button class="option-btn" onclick="selectAnswer(this, 'q3', false)">التكلفة والنفقة والخلل مصطلحات متطابقة تماماً</button>
+                <button class="option-btn" onclick="selectAnswer(this, 'q3', true)">التمييز بين التكلفة والنفقة والمصروف والخسارة، وتحليل سلوك التكلفة</button>
+                <button class="option-btn" onclick="selectAnswer(this, 'q3', false)">إلغاء التمييز بين سلوك التكلفة الثابتة والمتغيرة</button>
+                <button class="option-btn" onclick="selectAnswer(this, 'q3', false)">عدم دراسة العلاقة بين التكلفة والحجم والربح</button>
             </div>
         </div>
 
         <div class="quiz-card">
-            <div class="question-title">4. ما هو البُعد الذي يركز عليه نظام التكاليف المعاصر لدعم اتخاذ القرار؟[cite: 10]</div>
+            <div class="question-title">4. ما هو البُعد الذي يركز عليه نظام التكاليف المعاصر لدعم اتخاذ القرار؟</div>
             <div class="options-grid">
-                <button class="option-btn" onclick="selectAnswer(this, q4, true)">إعداد المعلومات الملائمة والموازنة بين متطلبات التقارير والاحتياجات الداخلية[cite: 10]</button>
-                <button class="option-btn" onclick="selectAnswer(this, q4, false)">الاهتمام فقط بالبيانات التاريخية القديمة دون القادمة</button>
-                <button class="option-btn" onclick="selectAnswer(this, q4, false)">الاقتصار على خدمة الجهات الخارجية مثل الضرائب فقط</button>
-                <button class="option-btn" onclick="selectAnswer(this, q4, false)">حساب التكاليف المباشرة فقط وتجاهل غير المباشرة</button>
+                <button class="option-btn" onclick="selectAnswer(this, 'q4', true)">إعداد المعلومات الملائمة والموازنة بين متطلبات التقارير والاحتياجات الداخلية</button>
+                <button class="option-btn" onclick="selectAnswer(this, 'q4', false)">الاهتمام فقط بالبيانات التاريخية القديمة دون القادمة</button>
+                <button class="option-btn" onclick="selectAnswer(this, 'q4', false)">الاقتصار على خدمة الجهات الخارجية مثل الضرائب فقط</button>
+                <button class="option-btn" onclick="selectAnswer(this, 'q4', false)">حساب التكاليف المباشرة فقط وتجاهل غير المباشرة</button>
             </div>
         </div>
     </div>
@@ -250,21 +250,21 @@
     <!-- Tab 3: Practical Calculation -->
     <div id="tab3" class="tab-content">
         <div class="math-box">
-            <h3>🧮 حالة عملية: قياس التكاليف قديماً[cite: 11]</h3>
-            <p>مصنع يصنع المنتج <strong>(س)</strong> خلال العام، ويحتاج المنتج الواحد إلى:[cite: 11]</p>
+            <h3>🧮 حالة عملية: قياس التكاليف قديماً</h3>
+            <p>مصنع يصنع المنتج <strong>(س)</strong> خلال العام، ويحتاج المنتج الواحد إلى:</p>
             <ul>
-                <li><strong>مواد خام:</strong> 100 ج[cite: 11]</li>
-                <li><strong>أجر العامل:</strong> 50 ج[cite: 11]</li>
-                <li><strong>حجم الإنتاج:</strong> 1000 وحدة خلال الفترة[cite: 11]</li>
+                <li><strong>مواد خام:</strong> 100 ج</li>
+                <li><strong>أجر العامل:</strong> 50 ج</li>
+                <li><strong>حجم الإنتاج:</strong> 1000 وحدة خلال الفترة</li>
             </ul>
 
             <div class="input-group">
-                <label>أ) احسب تكلفة الوحدة الواحدة (بالجنيه):[cite: 11]</label>
+                <label>أ) احسب تكلفة الوحدة الواحدة (بالجنيه):</label>
                 <input type="number" id="unitCostInput" placeholder="أدخل تكلفة الوحدة">
             </div>
 
             <div class="input-group">
-                <label>ب) احسب تكلفة الإنتاج الكلي (بالجنيه):[cite: 11]</label>
+                <label>ب) احسب تكلفة الإنتاج الكلي (بالجنيه):</label>
                 <input type="number" id="totalCostInput" placeholder="أدخل التكلفة الكلية">
             </div>
         </div>
@@ -314,9 +314,9 @@
         const totalCost = parseFloat(document.getElementById('totalCostInput').value);
 
         if (unitCost === 150 && totalCost === 150000) {
-            showFeedback('🎉 ممتاز جداً! الحسابات صحيحة تماماً:\nتكلفة الوحدة = 100 + 50 = 150 ج\nتكلفة الإنتاج الكلي = 150 × 1000 = 150,000 ج[cite: 11]', '#27ae60');
+            showFeedback('🎉 ممتاز جداً! الحسابات صحيحة تماماً:\nتكلفة الوحدة = 100 + 50 = 150 ج\nتكلفة الإنتاج الكلي = 150 × 1000 = 150,000 ج', '#27ae60');
         } else {
-            showFeedback('⚠️ هناك خطأ في الحسابات! تذكر: تكلفة الوحدة = (مواد خام + أجر عامل)[cite: 11]', '#e67e22');
+            showFeedback('⚠️ هناك خطأ في الحسابات! تذكر: تكلفة الوحدة = (مواد خام + أجر عامل)', '#e67e22');
         }
     }
 
