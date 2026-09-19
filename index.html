@@ -54,7 +54,6 @@
             margin: 0;
         }
 
-        /* Tabs Navigation */
         .tabs {
             display: flex;
             justify-content: center;
@@ -86,7 +85,6 @@
             display: block;
         }
 
-        /* Quiz / Recall Cards */
         .quiz-card {
             background: #fdfdfd;
             border: 2px solid #e2e8f0;
@@ -129,7 +127,6 @@
             background: #f0f7ff;
         }
 
-        /* Practical Math Challenge */
         .math-box {
             background: #fff8ec;
             border-right: 5px solid var(--warning-color);
@@ -158,7 +155,6 @@
             width: 200px;
         }
 
-        /* Controls & Submit */
         .btn-check {
             background-color: var(--success-color);
             color: white;
@@ -183,6 +179,7 @@
             font-weight: bold;
             text-align: center;
             min-height: 25px;
+            white-space: pre-line;
         }
     </style>
 </head>
@@ -194,14 +191,12 @@
         <p class="desc">اختبر مدى استيعابك وتذكرك لأهداف وأبعاد وأهمية محاسبة التكاليف والتطبيق الحسابي لها.</p>
     </header>
 
-    <!-- Navigation Tabs -->
     <div class="tabs">
-        <button class="tab-btn active" onclick="switchTab('tab1')">الجزء 1: الأسباب والأهداف</button>
-        <button class="tab-btn" onclick="switchTab('tab2')">الجزء 2: مفاهيم التكاليف</button>
-        <button class="tab-btn" onclick="switchTab('tab3')">الجزء 3: التطبيق الحسابي</button>
+        <button class="tab-btn active" onclick="switchTab(event, 'tab1')">الجزء 1: الأسباب والأهداف</button>
+        <button class="tab-btn" onclick="switchTab(event, 'tab2')">الجزء 2: مفاهيم التكاليف</button>
+        <button class="tab-btn" onclick="switchTab(event, 'tab3')">الجزء 3: التطبيق الحسابي</button>
     </div>
 
-    <!-- Tab 1: Causes & Objectives -->
     <div id="tab1" class="tab-content active">
         <div class="quiz-card">
             <div class="question-title">1. ما الذي أدى مباشرة إلى زيادة تعقيد تحديد تكلفة الوحدة وازدياد التكاليف غير المباشرة؟</div>
@@ -224,7 +219,6 @@
         </div>
     </div>
 
-    <!-- Tab 2: Cost Concepts -->
     <div id="tab2" class="tab-content">
         <div class="quiz-card">
             <div class="question-title">3. تهتم محاسبة التكاليف بالتمييز بين المفاهيم المحاسبية. أي العبارات التالية صحيحة؟</div>
@@ -247,7 +241,6 @@
         </div>
     </div>
 
-    <!-- Tab 3: Practical Calculation -->
     <div id="tab3" class="tab-content">
         <div class="math-box">
             <h3>🧮 حالة عملية: قياس التكاليف قديماً</h3>
@@ -277,12 +270,12 @@
 <script>
     let scores = { q1: false, q2: false, q3: false, q4: false };
 
-    function switchTab(tabId) {
+    function switchTab(evt, tabId) {
         document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
         document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
 
         document.getElementById(tabId).classList.add('active');
-        event.currentTarget.classList.add('active');
+        evt.currentTarget.classList.add('active');
         document.getElementById('feedback').textContent = '';
     }
 
