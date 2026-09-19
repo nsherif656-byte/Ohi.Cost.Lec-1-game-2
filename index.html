@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تحدي ذاكرة المحاسب الخبير: أهداف وأبعاد محاسبة التكاليف</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #2980b9;
+            --success-color: #27ae60;
+            --warning-color: #e67e22;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .game-container {
+            width: 100%;
+            max-width: 900px;
+            background: var(--card-bg);
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+            padding: 30px;
+            box-sizing: border-box;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 25px;
+            border-bottom: 2px solid #eef2f5;
+            padding-bottom: 15px;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            margin: 0 0 10px 0;
+            font-size: 24px;
+        }
+
+        p.desc {
+            color: #7f8c8d;
+            font-size: 15px;
+            margin: 0;
+        }
+
+        /* Tabs Navigation */
+        .tabs {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 25px;
+        }
+
+        .tab-btn {
+            background: #e9ecef;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+            color: var(--primary-color);
+            transition: all 0.2s;
+        }
+
+        .tab-btn.active {
+            background: var(--accent-color);
+            color: white;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        /* Quiz / Recall Cards */
+        .quiz-card {
+            background: #fdfdfd;
+            border: 2px solid #e2e8f0;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .question-title {
+            font-size: 17px;
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        .options-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        @media (max-width: 600px) {
+            .options-grid { grid-template-columns: 1fr; }
+        }
+
+        .option-btn {
+            background: #ffffff;
+            border: 1px solid #cbd5e1;
+            padding: 12px 15px;
+            border-radius: 6px;
+            cursor: pointer;
+            text-align: right;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+
+        .option-btn:hover {
+            border-color: var(--accent-color);
+            background: #f0f7ff;
+        }
+
+        /* Practical Math Challenge */
+        .math-box {
+            background: #fff8ec;
+            border-right: 5px solid var(--warning-color);
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .input-group label {
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .input-group input {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 16px;
+            width: 200px;
+        }
+
+        /* Controls & Submit */
+        .btn-check {
+            background-color: var(--success-color);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 6px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 15px;
+            transition: background 0.2s;
+        }
+
+        .btn-check:hover {
+            background-color: #219150;
+        }
+
+        #feedback {
+            margin-top: 20px;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            min-height: 25px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="game-container">
+    <header>
+        <h1>🧠 تحدي ذاكرة المحاسب الخبير</h1>
+        <p class="desc">اختبر مدى استيعابك وتذكرك لأهداف وأبعاد وأهمية محاسبة التكاليف والتطبيق الحسابي لها[cite: 10, 11].</p>
+    </header>
+
+    <!-- Navigation Tabs -->
+    <div class="tabs">
+        <button class="tab-btn active" onclick="switchTab('tab1')">الجزء 1: الأسباب والأهداف[cite: 10, 11]</button>
+        <button class="tab-btn" onclick="switchTab('tab2')">الجزء 2: مفاهيم التكاليف[cite: 11]</button>
+        <button class="tab-btn" onclick="switchTab('tab3')">الجزء 3: التطبيق الحسابي[cite: 11]</button>
+    </div>
+
+    <!-- Tab 1: Causes & Objectives -->
+    <div id="tab1" class="tab-content active">
+        <div class="quiz-card">
+            <div class="question-title">1. ما الذي أدى مباشرة إلى زيادة تعقيد تحديد تكلفة الوحدة وازدياد التكاليف غير المباشرة؟[cite: 10]</div>
+            <div class="options-grid">
+                <button class="option-btn" onclick="selectAnswer(this, q1, false)">قلة المنافسة وتوقف المصانع</button>
+                <button class="option-btn" onclick="selectAnswer(this, q1, true)">اتساع حجم المنشآت وتعدد مراحل التصنيع واستخدام الآلات[cite: 10]</button>
+                <button class="option-btn" onclick="selectAnswer(this, q1, false)">الاعتماد الكامل على العمل اليدوي فقط</button>
+                <button class="option-btn" onclick="selectAnswer(this, q1, false)">إلغاء التقارير المالية والإدارية</button>
+            </div>
+        </div>
+
+        <div class="quiz-card">
+            <div class="question-title">2. أي مما يلي يُعد من الأهداف الأساسية لتوفير معلومات التكلفة للإدارة؟[cite: 10, 11]</div>
+            <div class="options-grid">
+                <button class="option-btn" onclick="selectAnswer(this, q2, true)">المفاضلة بين البدائل وتحديد كفاءة استخدام الموارد المتاحة[cite: 10]</button>
+                <button class="option-btn" onclick="selectAnswer(this, q2, false)">زيادة حجم الفاقد والإسراف في الإنتاج</button>
+                <button class="option-btn" onclick="selectAnswer(this, q2, false)">تجاهل الفرق بين التكاليف الفعلية والمخططة</button>
+                <button class="option-btn" onclick="selectAnswer(this, q2, false)">التركيز الحصري على المعاملات الخارجية فقط</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tab 2: Cost Concepts -->
+    <div id="tab2" class="tab-content">
+        <div class="quiz-card">
+            <div class="question-title">3. تهتم محاسبة التكاليف بالتمييز بين المفاهيم المحاسبية. أي العبارات التالية صحيحة؟[cite: 11]</div>
+            <div class="options-grid">
+                <button class="option-btn" onclick="selectAnswer(this, q3, false)">التكلفة والنفقة والخلل مصطلحات متطابقة تماماً</button>
+                <button class="option-btn" onclick="selectAnswer(this, q3, true)">التمييز بين التكلفة والنفقة والمصروف والخسارة، وتحليل سلوك التكلفة[cite: 11]</button>
+                <button class="option-btn" onclick="selectAnswer(this, q3, false)">إلغاء التمييز بين سلوك التكلفة الثابتة والمتغيرة</button>
+                <button class="option-btn" onclick="selectAnswer(this, q3, false)">عدم دراسة العلاقة بين التكلفة والحجم والربح</button>
+            </div>
+        </div>
+
+        <div class="quiz-card">
+            <div class="question-title">4. ما هو البُعد الذي يركز عليه نظام التكاليف المعاصر لدعم اتخاذ القرار؟[cite: 10]</div>
+            <div class="options-grid">
+                <button class="option-btn" onclick="selectAnswer(this, q4, true)">إعداد المعلومات الملائمة والموازنة بين متطلبات التقارير والاحتياجات الداخلية[cite: 10]</button>
+                <button class="option-btn" onclick="selectAnswer(this, q4, false)">الاهتمام فقط بالبيانات التاريخية القديمة دون القادمة</button>
+                <button class="option-btn" onclick="selectAnswer(this, q4, false)">الاقتصار على خدمة الجهات الخارجية مثل الضرائب فقط</button>
+                <button class="option-btn" onclick="selectAnswer(this, q4, false)">حساب التكاليف المباشرة فقط وتجاهل غير المباشرة</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tab 3: Practical Calculation -->
+    <div id="tab3" class="tab-content">
+        <div class="math-box">
+            <h3>🧮 حالة عملية: قياس التكاليف قديماً[cite: 11]</h3>
+            <p>مصنع يصنع المنتج <strong>(س)</strong> خلال العام، ويحتاج المنتج الواحد إلى:[cite: 11]</p>
+            <ul>
+                <li><strong>مواد خام:</strong> 100 ج[cite: 11]</li>
+                <li><strong>أجر العامل:</strong> 50 ج[cite: 11]</li>
+                <li><strong>حجم الإنتاج:</strong> 1000 وحدة خلال الفترة[cite: 11]</li>
+            </ul>
+
+            <div class="input-group">
+                <label>أ) احسب تكلفة الوحدة الواحدة (بالجنيه):[cite: 11]</label>
+                <input type="number" id="unitCostInput" placeholder="أدخل تكلفة الوحدة">
+            </div>
+
+            <div class="input-group">
+                <label>ب) احسب تكلفة الإنتاج الكلي (بالجنيه):[cite: 11]</label>
+                <input type="number" id="totalCostInput" placeholder="أدخل التكلفة الكلية">
+            </div>
+        </div>
+        <button class="btn-check" onclick="checkMathAnswers()">تحقق من الحسابات</button>
+    </div>
+
+    <div id="feedback"></div>
+</div>
+
+<script>
+    let scores = { q1: false, q2: false, q3: false, q4: false };
+
+    function switchTab(tabId) {
+        document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
+        document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+
+        document.getElementById(tabId).classList.add('active');
+        event.currentTarget.classList.add('active');
+        document.getElementById('feedback').textContent = '';
+    }
+
+    function selectAnswer(btn, qKey, isCorrect) {
+        const parentGrid = btn.parentElement;
+        parentGrid.querySelectorAll('.option-btn').forEach(b => {
+            b.style.background = '#ffffff';
+            b.style.borderColor = '#cbd5e1';
+            b.style.color = '#333';
+        });
+
+        if (isCorrect) {
+            btn.style.background = '#d4edda';
+            btn.style.borderColor = '#27ae60';
+            btn.style.color = '#155724';
+            scores[qKey] = true;
+            showFeedback('إجابة صحيحة! أحسنت 🎯', '#27ae60');
+        } else {
+            btn.style.background = '#f8d7da';
+            btn.style.borderColor = '#e74c3c';
+            btn.style.color = '#721c24';
+            scores[qKey] = false;
+            showFeedback('إجابة خاطئة، حاول مرة أخرى! ❌', '#e74c3c');
+        }
+    }
+
+    function checkMathAnswers() {
+        const unitCost = parseFloat(document.getElementById('unitCostInput').value);
+        const totalCost = parseFloat(document.getElementById('totalCostInput').value);
+
+        if (unitCost === 150 && totalCost === 150000) {
+            showFeedback('🎉 ممتاز جداً! الحسابات صحيحة تماماً:\nتكلفة الوحدة = 100 + 50 = 150 ج\nتكلفة الإنتاج الكلي = 150 × 1000 = 150,000 ج[cite: 11]', '#27ae60');
+        } else {
+            showFeedback('⚠️ هناك خطأ في الحسابات! تذكر: تكلفة الوحدة = (مواد خام + أجر عامل)[cite: 11]', '#e67e22');
+        }
+    }
+
+    function showFeedback(text, color) {
+        const feedbackEl = document.getElementById('feedback');
+        feedbackEl.textContent = text;
+        feedbackEl.style.color = color;
+    }
+</script>
+
+</body>
+</html>
